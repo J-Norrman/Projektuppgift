@@ -15,10 +15,8 @@ class GameUtilTest {
         gameUtil = new GameUtil();
     }
     @Test
-    void toLowerCaseButFirstLetterCapitalized() {
+    void testToLowerCaseButFirstLetterCapitalized() {
         //Assert that method throws desired exception with a null input
-        assertThrows(GameException.class, () -> {
-            gameUtil.toLowerCaseButFirstLetterCapitalized(null);
-        });
+        assertThrows(GameException.class, () -> gameUtil.toLowerCaseButFirstLetterCapitalized(null));
     }
 }

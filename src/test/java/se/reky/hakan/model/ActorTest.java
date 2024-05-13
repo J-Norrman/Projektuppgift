@@ -19,7 +19,7 @@ class ActorTest extends Actor{
     }
 
     @Test
-    void attack() {
+    void testAttack() {
         //monster hp set to 20 in the setup, player attack is 7 so hp after the attack should be 13
         player.attack(monster);
         Assertions.assertEquals(13,monster.getHp());

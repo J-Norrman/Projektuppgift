@@ -24,13 +24,12 @@ class PlayerInteractionTest {
         player = new Player();
     }
     @Test
-    void updatePlayerHealth() {
-        //Player hp set to 10 then increased by 10 with updatePlayerHealth, health after update should be 20
+    void testUpdatePlayerHealth() {
         playerInteraction("").updatePlayerHealth(player,10);
         Assertions.assertEquals(10,player.getHp());
     }
     @Test
-    void playerSetupTest(){
+    void testPlayerSetup(){
         playerInteraction("Benny").setupPlayer(player);
         Assertions.assertEquals("Benny",player.getName());
 

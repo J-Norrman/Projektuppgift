@@ -18,7 +18,7 @@ class IOHandlerTest {
     }
 
     @Test
-    void hasNextInt() {
+    void testHasNextInt() {
         //dataForScanner set to any number, result should return true when we enter a number into the string
         //and return false for anything that is not a number
         IOHandler ioHandler = iOHandlerInput("2");
