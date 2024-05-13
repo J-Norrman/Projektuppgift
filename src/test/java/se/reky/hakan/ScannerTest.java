@@ -13,22 +13,20 @@ import static org.junit.jupiter.api.Assertions.*;
 public class ScannerTest {
 
     private Scanner scanner;
+    private final String input = "Hello";
 
     @BeforeEach
     public void setUp(){
-        String input = "Hello";
         System.setIn(new ByteArrayInputStream(input.getBytes()));
         scanner = new Scanner(System.in);
     }
 
     @Test
     public void testReadLine(){
+        //Check if the scanner.nextLine is equals to the input
         String result = scanner.nextLine();
-        assertEquals("Hello", result);
+        assertEquals(input, result);
     }
-    @AfterEach
-    public void tearDown(){
-        scanner.close();
-    }
+
 
 }
